@@ -27,19 +27,19 @@ const SwipePage = () =>{
     return(
         <SafeAreaView>
             <View style={styles.container}>
-                <View style={styles.title} >
+                <View style={styles.title}>
                     <Text style={styles.titleText}>matbap</Text>
                 </View>
                 {/* <Image source={require('../assets/img/steak.jpg')} style = {{width: '100%', height: '100%'}}></Image> */}
-                    <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['up', 'down']}
-                    style={{width: '100%', height: '90%'}}
+                <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['up', 'down']}
+                    style={{width: '100%', height: '100%'}}
                     >
                     <View style={styles.swipeContainer}>
-                    <Image source={require('../img/steak.jpg')} style = {{width: '100%', height: '100%', borderRadius: 20}}/>
-                    <LinearGradient
-                    colors={['transparent', 'black']}
-                    style={styles.gradient}
-                    />
+                        <Image source={require('../img/steak.jpg')} style = {{width: '100%', height: '100%', borderRadius: 20}}/>
+                        <LinearGradient
+                        colors={['transparent', 'black']}
+                        style={styles.gradient}
+                        />
                     </View>
                 </TinderCard>
                 {/* <View style={styles.foodNameContainer}>
@@ -57,7 +57,7 @@ const SwipePage = () =>{
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: "purple",
+        // backgroundColor: "purple",
         width: "100%",
         height: "100%",
         zIndex: 1,
@@ -70,11 +70,12 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems: 'center',
         width:'100%',
-        height: 100,
-        // backgroundColor: 'purple'
+        height: 80,
+        backgroundColor: 'white'
     },
     titleText:{
-        fontSize: 30
+        fontSize: 30,
+        color: 'black',
     },
     swipeArea:{
         width: '100%',
@@ -85,15 +86,15 @@ const styles = StyleSheet.create({
         // opacity: 0.3,
         zIndex:2,
         height: '100%',
-        // opacity: 0.9,
+        // opacity: 1.5,
         ...StyleSheet.absoluteFillObject,
 
     },
     swipeContainer:{
-        flex: 1,
-        width: 400,
+        // flex: 1,
+        width: 420,
         height: '100%',
-        backgroundColor: 'orange',
+        // backgroundColor: 'orange',
         borderRadius: 20,
         // padding: 20
     },
